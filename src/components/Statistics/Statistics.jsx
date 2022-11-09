@@ -1,7 +1,6 @@
 import { default as React } from 'react';
 import { default as PropTypes } from 'prop-types';
 import { SectionTitle } from './Statistics.styled';
-import { Notification } from '../Notification';
 
 export class Statistics extends React.Component {
   render() {
@@ -10,17 +9,13 @@ export class Statistics extends React.Component {
     return (
       <>
         <SectionTitle>Statistics</SectionTitle>
-        {total ? (
-          <>
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-            <p>Total: {total}</p>
-            <p>Positive feedback: {positivePercentage}%</p>
-          </>
-        ) : (
-          <Notification message="There is no feedback" />
-        )}
+        <>
+          <p>Good: {good}</p>
+          <p>Neutral: {neutral}</p>
+          <p>Bad: {bad}</p>
+          <p>Total: {total}</p>
+          <p>Positive feedback: {positivePercentage}%</p>
+        </>
       </>
     );
   }
